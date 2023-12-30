@@ -3,22 +3,389 @@ footer {
 
   .wrapper {
     padding: 60px 60px 0;
-
     border-radius: 30px 30px 0 0;
     background-color: $w;
     position: relative;
     z-index: 0;
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $bordergrey;
+      gap: 40px;
+
+      .left,
+      .right {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .left {
+        width: 70%;
+      }
+
+      .right {
+        width: 80%;
+      }
+
+      .logo {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h5 {
+          font-size: 14px;
+          color: $grey;
+          max-width: 240px;
+        }
+      }
+
+      .navs {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+
+        h3 {
+          color: $dark;
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        .links {
+          display: flex;
+          gap: 40px;
+
+          .left,
+          .right {
+            display: flex;
+            flex-direction: column;
+
+            gap: 8px;
+
+            .link {
+              a {
+                color: $grey;
+                font-size: 16px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+
+      .call {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 5px;
+
+        h5 {
+          color: $grey;
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        a {
+          font-size: 26px;
+          color: $dark;
+          font-weight: 600;
+        }
+
+        .online {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          margin-bottom: 15px;
+          position: relative;
+        }
+
+        .ids {
+          display: flex;
+          flex-direction: column;
+          span {
+            color: $grey;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .s__links {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+
+    .copyright {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0 30px;
+
+      span,
+      a {
+        color: $grey;
+        font-weight: 400;
+        font-size: 14px;
+
+        a {
+          color: $blue;
+        }
+      }
+
+      a {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
   }
 
   @media (max-width: $lscreen) {
+    .wrapper {
+      padding: 60px 30px 0;
+
+      .footer {
+        .logo {
+          gap: 10px;
+
+          img {
+            width: 150px;
+          }
+
+          h5 {
+            max-width: 140px;
+          }
+        }
+
+        .navs {
+          .links {
+            gap: 15px;
+
+            .left,
+            .right {
+              .link {
+                a {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        .call {
+          a {
+            font-size: 22px;
+          }
+          .online {
+            margin-bottom: unset;
+          }
+
+          .ids {
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .social {
+          .button {
+            padding: 12px 18px;
+          }
+
+          .s__links {
+            a {
+              img {
+                width: 46px;
+                height: 46px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   @media (max-width: $notebooks) {
+    .wrapper {
+      .footer {
+        display: grid;
+        gap: 20px;
+        justify-content: center;
+        grid-template-columns: minmax(460px, 665px);
+
+        .left,
+        .right {
+          width: 100%;
+        }
+      }
+
+      .copyright {
+        padding: 20px 0 20px;
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
   }
 
   @media (max-width: $tablet) {
+    .wrapper {
+      .footer {
+        display: grid;
+        gap: 20px;
+        justify-content: center;
+        grid-template-columns: minmax(460px, 665px);
+        padding-bottom: 20px;
+
+        .left,
+        .right {
+          width: 100%;
+        }
+
+        .left {
+          .navs {
+            .links {
+              gap: 10px;
+            }
+          }
+        }
+
+        .right {
+          .call {
+            a {
+              font-size: 20px;
+            }
+
+            .online {
+              h5 {
+                font-size: 13px;
+              }
+            }
+
+            .ids {
+              span {
+                font-size: 13px;
+              }
+            }
+          }
+          .social {
+            .button {
+              padding: 10px;
+              a {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      .copyright {
+        padding: 20px 0 20px;
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
   }
 
   @media (max-width: $mobile) {
+    .wrapper {
+      padding: 30px 10px 0;
+
+      .footer {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .logo {
+          img {
+            width: 160px;
+          }
+
+          h5 {
+            max-width: 180px;
+          }
+        }
+
+        .left,
+        .right {
+          width: unset;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .left {
+          .navs {
+            .links {
+              gap: 10px;
+            }
+          }
+        }
+
+        .right {
+          .call {
+            a {
+              font-size: 20px;
+            }
+
+            .online {
+              h5 {
+                font-size: 13px;
+              }
+            }
+
+            .ids {
+              span {
+                font-size: 13px;
+              }
+            }
+          }
+          .social {
+            align-items: center;
+            gap: 10px;
+
+            .button {
+              padding: 10px;
+              a {
+                font-size: 14px;
+              }
+            }
+
+            .s__links {
+              a {
+                img {
+                  width: 36px;
+                  height: 36px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .copyright {
+        padding: 20px 0 20px;
+        flex-direction: column;
+        gap: 2px;
+
+        span,
+        a {
+          font-size: 12px;
+        }
+      }
+    }
   }
 }
