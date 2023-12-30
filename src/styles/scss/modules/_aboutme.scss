@@ -1,0 +1,334 @@
+#aboutme {
+  .wrapper {
+    padding: 0 60px 100px;
+    background-color: $background;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    .left {
+      .text {
+        margin-bottom: 40px;
+
+        .h2 {
+          color: $dark;
+          max-width: none;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+
+        h3 {
+          font-size: 22px;
+          font-weight: 600;
+          color: $dark;
+        }
+
+        h5 {
+          color: $grey;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+
+      .marks {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 50px;
+
+        .redmark {
+          display: flex;
+          gap: 10px;
+
+          h4 {
+            color: $grey;
+            font-weight: 400;
+            font-size: 18px;
+            max-width: 515px;
+          }
+
+          img {
+            display: flex;
+            align-items: flex-start;
+          }
+        }
+      }
+
+      .c__btn {
+        display: flex;
+        gap: 20px;
+
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          color: $grey;
+          width: 100%;
+          max-width: 155px;
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+
+      img {
+        width: 100%;
+        max-width: 647px;
+        border-radius: 20px;
+      }
+
+      .board {
+        background-color: $w;
+        border-radius: 20px;
+        padding: 2% 3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+        max-width: 415px;
+
+        box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1);
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          max-width: 340px;
+          padding-right: 18px;
+          border-right: 1px solid $bordergrey;
+
+          h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: $dark;
+          }
+
+          h5 {
+            color: $grey;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+
+        img {
+          width: 46px;
+          height: 46px;
+          max-width: unset;
+          border-radius: unset;
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    .wrapper {
+      padding: 0 30px 60px;
+
+      .left {
+        .marks {
+          margin-bottom: 40px;
+
+          .redmark {
+            h4 {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .c__btn {
+          flex-direction: column;
+          gap: 10px;
+
+          span {
+            max-width: unset;
+          }
+        }
+      }
+
+      .right {
+        .board {
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 0;
+          bottom: 20px;
+          max-width: 415px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .wrapper {
+      flex-direction: column;
+
+      .left {
+        .text {
+          margin-bottom: 25px;
+
+          .h2 {
+            max-width: none;
+          }
+        }
+
+        .marks {
+          margin-bottom: 25px;
+
+          .redmark {
+            h4 {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .c__btn {
+          flex-direction: column;
+          gap: 10px;
+
+          span {
+            max-width: unset;
+          }
+        }
+      }
+
+      .right {
+        .board {
+          bottom: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .wrapper {
+      .left {
+        .text {
+          margin-bottom: 25px;
+
+          .h2 {
+            max-width: none;
+          }
+        }
+
+        .marks {
+          margin-bottom: 25px;
+
+          .redmark {
+            h4 {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .c__btn {
+          flex-direction: column;
+          gap: 10px;
+
+          span {
+            max-width: unset;
+          }
+        }
+      }
+
+      .right {
+        .board {
+          bottom: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .wrapper {
+      padding: 0 10px 30px;
+
+      .left {
+        .text {
+          margin-bottom: 25px;
+
+          .h2 {
+            max-width: none;
+          }
+        }
+
+        .marks {
+          margin-bottom: 25px;
+
+          .redmark {
+            h4 {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .c__btn {
+          flex-direction: column;
+          gap: 10px;
+
+          .button {
+            padding: 14px 10px;
+          }
+
+          span {
+            max-width: unset;
+            text-align: center;
+          }
+        }
+      }
+
+      .right {
+        .board {
+          bottom: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 0;
+          border-radius: 10px;
+          margin: 0 5px;
+
+          .info {
+            gap: unset;
+            padding-right: 10px;
+
+            h3 {
+              font-size: 16px;
+            }
+            h5 {
+              font-size: 12px;
+            }
+          }
+
+          img {
+            margin-left: 10px;
+            width: 38px;
+            height: 38px;
+          }
+        }
+      }
+    }
+  }
+}

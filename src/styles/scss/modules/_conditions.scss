@@ -1,0 +1,318 @@
+#conditions {
+  .wrapper {
+    padding: 0 60px 100px;
+    background-color: $background;
+
+    .text {
+      margin-bottom: 50px;
+
+      .h2 {
+        text-align: center;
+      }
+    }
+
+    .conditions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+
+      .condition {
+        max-width: 427px;
+        padding: 24px;
+        background-color: $w;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h3 {
+          font-size: 20px;
+          font-weight: 500;
+          color: $dark;
+          max-width: 380px;
+          margin-bottom: 10px;
+        }
+
+        h4 {
+          font-size: 15px;
+          font-weight: 400;
+          color: $grey;
+          max-width: 380px;
+          margin-bottom: 30px;
+        }
+
+        .points {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          margin-bottom: 30px;
+
+          .point {
+            display: flex;
+            justify-content: space-between;
+
+            h5 {
+              font-size: 15px;
+              color: $grey;
+            }
+
+            span {
+              font-size: 15px;
+              color: $red;
+            }
+          }
+        }
+
+        .button {
+          background-color: $blue;
+        }
+
+        &.form {
+          background-color: $blue;
+
+          form {
+            gap: unset;
+
+            h3 {
+              font-size: 20px;
+              font-weight: 500;
+              color: $w;
+              max-width: 380px;
+              margin-bottom: 10px;
+            }
+
+            h4 {
+              font-size: 15px;
+              color: $w;
+            }
+
+            .inputs {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              margin-bottom: 20px;
+
+              input {
+                color: $w;
+                font-size: 15px;
+              }
+            }
+
+            .button {
+              background-color: $w;
+              color: $blue;
+              font-size: 15px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    &__table {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+
+      .table {
+        border-collapse: collapse;
+
+        thead {
+          tr {
+            border-bottom: 1px solid $bordergrey;
+            position: relative;
+
+            .dot {
+              &::before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                background-color: #ec1c26;
+                display: block;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translateX(-10px);
+              }
+            }
+
+            th {
+              &:nth-child(1) {
+                padding: 24px 0 20px 0;
+              }
+
+              &:nth-child(2) {
+                padding: 24px 24px 20px 0;
+              }
+
+              &:nth-child(3) {
+                padding: 24px 0 20px 20px;
+              }
+            }
+
+            th {
+              color: $grey;
+              font-size: 14px;
+              font-weight: 400;
+              padding: 24px 24px 20px;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            border-collapse: collapse;
+            border-bottom: 1px solid $bordergrey;
+
+            td {
+              font-size: 14px;
+              color: $dark;
+
+              &:nth-child(1) {
+                padding: 18px 20px 18px 0;
+              }
+
+              &:nth-child(2) {
+                padding: 18px 0 18px 0;
+              }
+
+              &:nth-child(3) {
+                padding: 18px 0 18px 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    .wrapper {
+      padding: 0 30px 60px;
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .wrapper {
+      .text {
+        .h2 {
+          max-width: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .wrapper {
+      .text {
+        margin-bottom: 25px;
+      }
+
+      .conditions {
+        margin-bottom: 20px;
+      }
+
+      &__table {
+        padding: 0;
+
+        .table {
+          thead {
+            tr {
+              th {
+                font-size: 13px;
+              }
+
+              th {
+                &:nth-child(1) {
+                  padding: 12px 0 10px 0;
+                }
+
+                &:nth-child(2) {
+                  padding: 12px 12px 10px 0;
+                }
+
+                &:nth-child(3) {
+                  padding: 12px 0 10px 0px;
+                }
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              td {
+                font-size: 13px;
+                color: $dark;
+
+                &:nth-child(1) {
+                  padding: 18px 5px 18px 0;
+                }
+
+                &:nth-child(2) {
+                  padding: 18px 0 18px 0;
+                }
+
+                &:nth-child(3) {
+                  padding: 18px 0 18px 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .wrapper {
+      padding: 0 10px 30px;
+
+      .conditions {
+        .condition {
+          padding: 12px;
+
+          h3 {
+            font-size: 16px;
+          }
+
+          h4 {
+            font-size: 14px;
+            margin-bottom: 15px;
+          }
+
+          .points {
+            .point {
+              h5 {
+                font-size: 13px;
+              }
+
+              span {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .button {
+            a {
+              font-size: 14px;
+            }
+          }
+
+          &.form {
+            form {
+              h3 {
+                font-size: 16px;
+              }
+
+              h4 {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

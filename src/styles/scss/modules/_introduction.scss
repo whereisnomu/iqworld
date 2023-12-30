@@ -1,0 +1,197 @@
+@import "../variables";
+
+#introduction {
+  background-color: $firstground;
+
+  .wrapper {
+    padding: 100px 60px;
+    border-radius: 30px 30px 0 0;
+    background-color: $w;
+    position: relative;
+    z-index: 0;
+
+    .text {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      .h2 {
+        max-width: 765px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .small {
+        max-width: 450px;
+        font-size: 18px;
+        font-weight: 400;
+        color: $grey;
+        line-height: 26px;
+      }
+    }
+
+    .icards {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .icard {
+        position: relative;
+
+        .cimg {
+          border-radius: 20px;
+          z-index: 0;
+        }
+
+        h4 {
+          max-width: 265px;
+          position: absolute;
+          font-size: 18px;
+          color: $w;
+          font-weight: 400;
+          z-index: 1;
+          bottom: 30px;
+          left: 25px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $sxga) {
+    .wrapper {
+      .text {
+        .small {
+          font-size: 16px;
+          max-width: 395px;
+        }
+      }
+
+      .icards {
+        .icard {
+          .cimg {
+            width: 255px;
+          }
+
+          h4 {
+            font-size: 16px;
+            bottom: 25px;
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    .wrapper {
+      padding: 60px 30px;
+
+      .text {
+        .small {
+          max-width: 395px;
+        }
+      }
+
+      .icards {
+        .icard {
+          .cimg {
+            width: 225px;
+          }
+
+          h4 {
+            font-size: 16px;
+            bottom: 25px;
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .wrapper {
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        .small {
+          font-size: 14px;
+          line-height: 20px;
+          max-width: 348px;
+        }
+      }
+
+      .icards {
+        .icard {
+          .cimg {
+            width: calc(315px - 20px);
+          }
+
+          h4 {
+            font-size: 18px;
+            bottom: 25px;
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .wrapper {
+      padding: 40px 30px;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 25px;
+
+        .small {
+          font-size: 13px;
+          line-height: 18px;
+          max-width: 348px;
+        }
+      }
+
+      .icards {
+        .icard {
+          .cimg {
+            width: calc(315px - 20px);
+          }
+
+          h4 {
+            font-size: 18px;
+            bottom: 25px;
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .wrapper {
+      padding: 30px 10px;
+
+      .icards {
+        .icard {
+          .cimg {
+            width: calc(315px - 20px);
+          }
+
+          h4 {
+            bottom: 25px;
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
