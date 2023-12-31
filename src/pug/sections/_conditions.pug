@@ -24,7 +24,7 @@ section#conditions
                .point 
                   h5 Окупаемость
                   span от 20 месяцев
-            .button 
+            .button.openModalBtn
                a(href="#") Стать партнером 
 
          .condition
@@ -43,11 +43,11 @@ section#conditions
                .point 
                   h5 Окупаемость
                   span от 12 месяцев
-            .button 
+            .button.openModalBtn
                a(href="#") Стать партнером 
          
          .condition.form 
-            form(action="#")
+            form(action="./php/mail.php" method="POST")
                h3 Мы рады ответить на все интересующие вас вопросы
                h4 Позвоните и получите личную консультацию по запуску франшизы «iQ Мир»
 
@@ -58,6 +58,8 @@ section#conditions
                   input(type="text" placeholder="Город" name="city")
 
                button(type='submit').button Запишитесь на личную консультацию
+
+
       .wrapper__table
          table.table
             thead 
@@ -131,4 +133,24 @@ section#conditions
                   td 500 000₽
                   td 300 000₽
 
+
+   div(class='modal' id="myModal")
+      .modal-content
+         span.close#closeModalBtn
+            svg.closesvg(width='26', height='26', viewBox='0 0 26 26', xmlns='http://www.w3.org/2000/svg')
+               path(d='M19.5 6.5L6.5 19.5', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+               path(d='M6.5 6.5L19.5 19.5', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+
+         .form 
+            form(action="./php/mail.php" method="POST")
+               h3 Мы рады ответить на все интересующие вас вопросы
+               h4 Позвоните и получите личную консультацию по запуску франшизы «iQ Мир»
+
+               .inputs
+                  input(type="text" placeholder="Ваше имя" name="name")
+                  input(type="tel" placeholder="Телефон" name="phone")
+                  input(type="email" placeholder="Электронная почта" name="email")
+                  input(type="text" placeholder="Город" name="city")
+
+               button(type='submit').button Запишитесь на личную консультацию
 
