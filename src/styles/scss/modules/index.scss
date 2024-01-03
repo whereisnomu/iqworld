@@ -1,14 +1,14 @@
-@import "./header";
-@import "./mainscreen";
-@import "./introduction";
-@import "./gallery";
-@import "./reasons";
-@import "./why";
-@import "./conditions";
-@import "./benefits";
-@import "./support";
-@import "./makemoney";
-@import "./aboutme";
-@import "./footer";
+@use "./header";
+@use "./mainscreen";
+@use "./introduction";
+@use "./gallery";
+@use "./reasons";
+@use "./why";
+@use "./conditions";
+@use "./benefits";
+@use "./support";
+@use "./makemoney";
+@use "./aboutme";
+@use "./footer";
 
-@import "./thankyou";
+@use "./thankyou";

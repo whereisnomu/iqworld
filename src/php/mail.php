@@ -35,7 +35,7 @@ $city = $_POST['city'];
 
 $mail->setFrom('tf-no-reply-bot@mail.ru', 'tf-no-reply-bot');
 
-$mail->addAddress('arturchagirov@gmail.com', 'Arthur');
+$mail->addAddress('Sereda_lena_91@mail.ru', 'Елена');
 // $mail->AddCC('irinazuboreva@topfranchise.ru', 'Irina Zubareva');
 // $mail->AddCC('rezultat_logoped@mail.ru', 'Logoped Rezultat');
 
