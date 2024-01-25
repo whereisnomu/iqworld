@@ -12,8 +12,17 @@
 
     .text {
       margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
 
       .h2 {
+        color: $w;
+        text-align: center;
+        max-width: none;
+      }
+
+      .h3 {
         color: $w;
         text-align: center;
         max-width: none;
